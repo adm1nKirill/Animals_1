@@ -10,14 +10,14 @@ enum type {
     predator, herbivorous, insectivorous
 };
 
-struct common_animal {
+struct commonAnimal {
     enumAnimal TYPE; // Тип животного
     std::string name; // Имя животного
     int age; // Возраст
     type living_place;
 };
 
-bool readCM(std::ifstream& ifs, common_animal *f);
-void outCM(std::ofstream& ofs, common_animal *f);
+bool readCM(std::ifstream& ifs, commonAnimal *f);
+void outCM(std::ofstream& ofs, commonAnimal *f);
 
 #endif //COMMON_ANIMALS_H
