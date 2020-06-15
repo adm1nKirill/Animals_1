@@ -10,7 +10,7 @@ animal *readA(std::ifstream &ifs) {
     if(type < 0 || type > 2) {
         return NULL;
     }
-    if(ifs.fail()) return false;
+    if(ifs.fail()) return NULL;
     animal* read = NULL;
     std::string name;
     Read = NULL;
@@ -30,12 +30,12 @@ animal *readA(std::ifstream &ifs) {
         ifs >> age;
     else return nullptr;
     if(_age < 0) return nullptr;
-    if(ifs.fail()) return false;
+    if(ifs.fail()) return NULL;
     // Считываем имя
     if(!ifs.eof())
         ifs >> _name;
     else return nullptr;
-    if(ifs.fail()) return false;
+    if(ifs.fail()) return NULL;
     read->name = name;
     read->age = age;
     switch (type) {
